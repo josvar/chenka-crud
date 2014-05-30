@@ -1,0 +1,37 @@
+/*
+|---------------------------------------------------------------------
+| Menu top bar
+|---------------------------------------------------------------------
+*/
+#ch-menu-top-bar{
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+  @media #{$medium-up} {
+    position: fixed;
+    li a, li i{
+    }
+  }
+
+  .top-bar-section{
+    @media #{$small-only} {
+      li a, li i{
+
+        // 1.6em * 18px = 28.8px fail :D
+        // line-height: inherit;
+        line-height: 20px;
+      }
+      a {
+        font-size: rem-calc(16);
+      }
+    }
+  }
+
+  i{
+    font-size: rem-calc(18);
+    margin-right: 6px;
+    float: left;
+  }
+}

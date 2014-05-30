@@ -1,0 +1,144 @@
+/*
+|---------------------------------------------------------------------
+| Sidebar Menu List
+|---------------------------------------------------------------------
+*/
+ul#admin-menu {
+  clear: left;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+  a{
+    display: block;
+  }
+
+  li{
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+  }
+  li.ch-has-current-submenu{
+    a.ch-has-current-submenu{
+      color: #fff;
+      background: #0074a2;
+      position: relative;
+    }
+
+    a.ch-has-current-submenu:after{
+
+      right:0;
+      border-right: 8px solid $document-bg;
+      border-left: 8px solid transparent;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      content:" ";
+      height:0;
+      width:0;
+      position:absolute;
+      pointer-events: none;
+      top:50%;
+      margin-top:-8px;
+
+    }
+
+    ul>li>a{
+      padding: 6px 12px;
+    }
+
+    .ch-submenu{
+      font-size: rem-calc(13);
+      background-color: $sidebar-submenu-bg;
+
+      position: relative;
+      z-index: 3;
+      top: auto;
+      left: auto;
+      right: auto;
+      bottom: auto;
+      border: 0 none;
+      margin-top: 0;
+      box-shadow: none;
+
+      list-style: none;
+      overflow: visible;
+      word-wrap: break-word;
+
+      padding: 7px 0 8px;
+
+      li.current, li.current:hover, li.current a, li.current a:hover{
+        color: #fff;
+        background: transparent;
+        font-weight: 600;
+      }
+
+      li{
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+      }
+
+      li a{
+        color: #bbb;
+      }
+
+      li:hover, li a:hover{
+        color: #2ea2cc;
+      }
+
+      a{
+        line-height: rem-calc(16);
+      }
+
+    }
+  }
+  li.menu-separator{
+    height: 5px;
+    padding: 0;
+    margin: 0 0 6px;
+    border-width: 1px 0;
+    border-style: solid;
+    cursor: inherit;
+
+    background: transparent;
+    border-color: transparent;
+  }
+  .separator{
+    height: 1px;
+    padding: 0;
+    border-width: 1px 0 0;
+    border-style: solid;
+    border-color: transparent;
+  }
+
+  a.menu-top{
+    color: #eee;
+    font-size: rem-calc(14);
+    font-weight: 400;
+    line-height: 18px;
+    padding: 0;
+  }
+  a.menu-top:hover{
+    background-color: $topbar-link-bg-hover;
+    color: $topbar-link-color-hover;
+  }
+  .menu-name{
+    padding: 8px 0;
+  }
+  .menu-image{
+    padding: 8px 0;
+    float: left;
+    width: 36px;
+    height: 34px;
+    margin: 0;
+    text-align: center;
+    font-size: rem-calc(18);
+
+    i {
+      line-height: inherit;
+    }
+  }
+
+  .ch-submenu{
+    background-color: $sidebar-submenu-bg;
+  }
+}

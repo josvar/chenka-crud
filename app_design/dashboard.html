@@ -1,0 +1,212 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>ChenkaCrud</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <link rel="stylesheet" href="bower_components/foundation-icon-fonts/foundation-icons.css">
+
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+  <!-- build:js scripts/vendor/modernizr.js -->
+  <!--<script src="bower_components/modernizr/modernizr.js"></script>-->
+  <!-- endbuild -->
+</head>
+
+<body class="dashboard">
+  <div class="ch-wrap">
+
+    <div id="admin-menu-background"></div>
+    <div id="admin-menu-wrap">
+      <ul id="admin-menu">
+        <li class="">
+          <a href="" class="menu-top">
+            <div class="menu-image"><i class="fi-home"></i></div>
+            <div class="menu-name">Dashboard</div>
+          </a>
+        </li>
+        <li class="menu-separator"><div class="separator"></div></li>
+        <li class="ch-has-submenu ch-has-current-submenu">
+          <a href="" class="ch-has-submenu ch-has-current-submenu menu-top">
+            <div class="menu-image"><i class="fi-page-edit"></i></div>
+            <div class="menu-name">Posts</div>
+          </a>
+          <ul class="ch-submenu ch-submenu-wrap">
+            <li class="ch-first-item current"><a href="" class="ch-first-item current">All Posts</a></li>
+            <li><a href="">Add New</a></li>
+          </ul>
+        </li>
+        <li class="">
+          <a href="" class="menu-top">
+            <div class="menu-image"><i class="fi-comments"></i></div>
+            <div class="menu-name">Comments</div>
+          </a>
+        </li>
+        <li class="">
+          <a href="" class="menu-top">
+            <div class="menu-image"><i class="fi-thumbnails"></i></div>
+            <div class="menu-name">Blocks</div>
+          </a>
+        </li>
+        <li class="">
+          <a href="" class="menu-top">
+            <div class="menu-image"><i class="fi-photo"></i></div>
+            <div class="menu-name">Media</div>
+          </a>
+        </li>
+        <li class="">
+          <a href="" class="menu-top">
+            <div class="menu-image"><i class="fi-widget"></i></div>
+            <div class="menu-name">Settings</div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="ch-content">
+
+      <div id="ch-menu-top-bar">
+        <nav class="top-bar" data-topbar>
+          <ul class="title-area">
+            <li class="name">
+              <h1><a href="#">ChenkaCrud</a></h1>
+            </li>
+            <li class="toggle-topbar menu-icon"><a href="#"></a></li>
+          </ul>
+
+          <section class="top-bar-section">
+            <!-- Right Nav Section -->
+            <ul class="right">
+              <li class=""><a href="#"><i class="fi-torso" ></i>Boris</a></li>
+              <li class=""><a href="#"><i class="fi-widget"></i>Settings</a></li>
+              <li class=""><a href="#"><i class="fi-power"></i>Log out</a></li>
+            </ul>
+          </section>
+        </nav>
+      </div>
+
+
+
+      <div class="ch-body">
+        <div class="ch-body-content">
+          <div class="wrap">
+            <div class="one-column">
+              <h2>Edit Post</h2>
+            </div>
+
+            <form action="">
+              <div class="form-wrap">
+                <div class="two-columns" >
+                  <div class="body-container ">
+                    <div class="row title-wrap">
+                      <input id="title" type="text" placeholder="Enter title here"/>
+                    </div>
+                    <div class="row edit-form-section">
+                      <textarea name="" id="editor1" cols="30" rows="10"></textarea>
+                    </div>
+                  </div>
+                  <div class="container-1">
+                    <div id="submit-div" class="ch-box">
+                      <h3><span>Publish</span></h3>
+                      <div class="inside">
+                        <div id="minor-publishing-actions">
+                        </div>
+                        <div id="major-publishing-actions">
+                          <div id="delete-action">
+                            <a href="" class="submit-delete">Move to Trash</a>
+                          </div>
+                          <div id="publish-action">
+                            <input type="submit" name="publish" id="publish" value="Publish" class="button small"/>
+                          </div>
+                          <div class="clear-both"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ch-box">
+                      <h3><span>Tags</span></h3>
+                      <div class="inside">
+                      </div>
+                    </div>
+                    <div class="ch-box">
+                      <h3><span>Publish</span></h3>
+                      <div class="inside">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="container-2">
+                    <div class="ch-box">
+                      <h3><span>Publish</span></h3>
+                      <div class="inside">
+                      </div>
+                    </div>
+                    <div class="ch-box">
+                      <h3><span>Publish</span></h3>
+                      <div class="inside">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="clear-both"></div>
+              </div>
+              <!-- end form-wrap-->
+            </form>
+            <!-- end form -->
+
+            <div class="clear-both"></div>
+          </div>
+          <!-- end wrap -->
+
+          <div class="clear-both"></div>
+        </div>
+        <!-- end ch-body-content -->
+        <div class="clear-both"></div>
+      </div>
+
+
+
+
+    </div>
+    <!-- end ch-content -->
+  </div>
+  <!-- end ch-wrap-->
+
+  <!--[if lt IE 10]>
+  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <!-- build:js scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/underscore/underscore.js"></script>
+  <script src="bower_components/backbone/backbone.js"></script>
+  <script src="bower_components/requirejs/require.js"></script>
+  <script src="bower_components/fastclick/lib/fastclick.js"></script>
+  <script src="bower_components/jquery.cookie/jquery.cookie.js"></script>
+  <script src="bower_components/jquery-placeholder/jquery.placeholder.js"></script>
+  <script src="bower_components/foundation/js/foundation.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <script src="bower_components/ckeditor/ckeditor.js"></script>
+  <script>
+    $(document).foundation();
+    CKEDITOR.replace( 'editor1', {
+      extraPlugins: 'image2',
+      filebrowserBrowseUrl: '/browser/browse.php',
+      filebrowserUploadUrl: '/uploader/upload.php'
+    });
+  </script>
+
+  <!-- build:js({.tmp,app_design}) scripts/main.js -->
+  <script src="scripts/main.js"></script>
+  <!-- endbuild -->
+</body>
+</html>

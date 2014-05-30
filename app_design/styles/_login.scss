@@ -1,0 +1,74 @@
+body.login {
+  #login {
+    width: 320px;
+    padding: 8% 0 0;
+    margin: auto;
+
+    h1 {
+      text-align: center;
+      font-family: BebasNeue Bold;
+      color: #0074a2;
+      font-size: rem-calc(60);
+    }
+
+    form {
+
+      background: #fff;
+      box-shadow: 0 1px 3px rgba(0,0,0,.13);
+
+      margin-top: 20px;
+      margin-left: 0;
+      padding: 26px 24px 26px;
+      font-weight: 400;
+      overflow: hidden;
+
+      label{
+        color: #777;
+      }
+      .input {
+        font-size: rem-calc(24);
+        line-height: 1;
+        width: 100%;
+        padding: 3px;
+        margin: 2px 6px 16px 0;
+        background: #fbfbfb;
+      }
+
+      .button{
+        float: right;
+        font-size: rem-calc(14);
+        line-height: 1;
+      }
+      .footer-group{
+        display: block;
+        min-height: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding-left: 20px;
+        .remember {
+          float: left;
+          font-size: 12px;
+          line-height: 20px;
+          color: #777;
+        }
+        .checkbox{
+          float: left;
+          margin: 4px 0 0;
+          margin-left: -20px;
+          line-height: normal;
+        }
+      }
+    }
+
+    .footer{
+      margin: 24px 0 0;
+      font-size: rem-calc(13);
+      padding: 0 24px;
+      a{
+        color: #999;
+        margin-bottom: 24px;
+        display: block;
+      }
+    }
+  }
+}

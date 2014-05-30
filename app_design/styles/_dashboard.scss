@@ -1,0 +1,24 @@
+body.dashboard {
+  -webkit-font-smoothing: subpixel-antialiased;
+
+  .ch-content {
+    h2{
+      font-size: rem-calc(23);
+      font-weight: 400;
+      padding: 9px 15px 4px 0;
+      line-height: 29px;
+      margin: 0;
+    }
+
+    .ch-body form {
+      .title-wrap{
+        #title{
+          font-size: rem-calc(22);
+        }
+      }
+      .edit-form-section{
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

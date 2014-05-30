@@ -1,0 +1,57 @@
+.ch-box{
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 1px 1px rgba(0,0,0,.04);
+  background-color: #fff;
+  margin-bottom: 20px;
+  h3{
+    font-size: rem-calc(14);
+    padding: 8px 12px;
+    margin: 0;
+    line-height: 1.4;
+    border-bottom: 1px solid #eee;
+    color: #222;
+    font-weight: bold;
+    font-family: "Open Sans",sans-serif;
+  }
+  .inside{
+    margin: 6px 0 0;
+    position: relative;
+    padding: 0 12px 12px;
+    line-height: rem-calc(18);
+    font-size: rem-calc(13);
+  }
+}
+.form-wrap #submit-div .inside{
+  margin: 0;
+  padding: 0;
+
+  .button {
+    font-size: rem-calc(13);
+    line-height: 1;
+  }
+
+  #major-publishing-actions{
+    padding: 10px;
+    clear: both;
+    border-top: 1px solid #ddd;
+    background: #f5f5f5;
+
+    #publish-action{
+      float: right;
+      text-align: right;
+    }
+    #delete-action{
+      line-height: rem-calc(13)+2*$button-sml;
+      vertical-align: middle;
+      text-align: left;
+      float: left;
+
+      a{
+        color: #a00;
+      }
+      a:hover{
+        color: #a00;
+      }
+    }
+  }
+}

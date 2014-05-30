@@ -4,6 +4,9 @@
 /.tmp
 /.idea
 /node_modules
+/app_design/bower_components
+/test/bower_components
+/dist
 composer.phar
 composer.lock
 .env.*.php

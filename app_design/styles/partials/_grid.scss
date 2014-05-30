@@ -1,0 +1,131 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body.dashboard {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  @media #{$medium-up} {
+    margin-top: 32px;
+  }
+
+  .ch-wrap{
+    height: auto;
+    min-height: 100%;
+    width: 100%;
+    position: relative;
+
+
+    .ch-content{
+      @media #{$medium-up} {
+        margin-left: 180px;
+        margin-top: 0;
+        padding-left: 0;
+      }
+      margin-left: 0;
+      padding-left: 10px;
+      height: 100%;
+
+
+      .ch-body{
+        position: relative;
+
+        padding-top: 46px;
+        @media #{$medium-up} {
+          padding-top: 0;
+        }
+
+        .ch-body-content{
+          padding-bottom: 65px;
+          float: left;
+          width: 100%;
+          overflow: visible!important;
+
+          .wrap{
+            margin-right: 12px;
+            margin-left: 0;
+            @media #{$medium-up} {
+              margin: 10px 20px 0 2px;
+            }
+
+            .one-column {
+              margin: 0;
+              @media #{$medium-up} {
+              }
+            }
+
+            .form-wrap {
+              padding-top: 10px;
+              min-width: 0;
+              @media #{$medium-up} {
+                min-width: 763px;
+              }
+
+              .two-columns{
+                margin: 0;
+                @media #{$medium-up} {
+                  margin-right: 300px;
+                }
+              }
+
+              .container-1{
+                margin-right: 0;
+                width: 100%;
+                float: right;
+                @media #{$medium-up} {
+                  width: 280px;
+                  margin-right: -300px;
+                }
+              }
+
+              .body-container, .container-2{
+                height: auto;
+                min-height: 100%;
+                width: 100%;
+                position: static;
+                float: left;
+                min-width: 0;
+                @media #{$medium-up} {
+                  min-width: 463px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*
+|---------------------------------------------------------------------
+| Sidebar Menu
+|---------------------------------------------------------------------
+*/
+#admin-menu-background{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  @media #{$small-only} {
+    display: none;
+  }
+}
+
+#admin-menu-wrap{
+  z-index: 99;
+  position: fixed;
+  @media #{$small-only} {
+    display: none;
+  }
+}
+
+#admin-menu-background, #admin-menu-wrap, #admin-menu, #admin-menu .ch-submenu {
+  width: 160px;
+}

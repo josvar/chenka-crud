@@ -1,0 +1,17 @@
+$sidebar-second-color-link: #bbb;
+$sidebar-submenu-bg: #333;
+$document-bg: #f1f1f1;
+
+#admin-menu-background, #admin-menu-wrap, #admin-menu {
+  background-color: #222;
+}
+
+html {
+  background: $document-bg;
+  body {
+    background-color: transparent;
+    color: #444;
+  }
+}
+
+
