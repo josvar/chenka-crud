@@ -7,7 +7,7 @@ Route::get('/', function()
 
 Route::get('/gaston', function()
 {
-    return View::make('hello gaston!');
+    return View::make('hello josue!');
 });
 
 Route::group(['prefix' => Config::get('chenka.app.access_url')], function() {
