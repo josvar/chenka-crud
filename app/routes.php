@@ -5,11 +5,6 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
-Route::get('/gaston', function()
-{
-    return View::make('hello gaston!');
-});
-
 Route::group(['prefix' => Config::get('chenka.app.access_url')], function() {
 
     Route::get('/', [ 'as' => 'dashboard', 'uses' => 'DashboardController@index']);
