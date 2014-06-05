@@ -23,7 +23,10 @@ class SessionsController extends \BaseController {
      */
     public function create()
 	{
-        return 'Login';
+        if(Auth::check()) {
+            return Redirect::route('dashboard');
+        }
+        return View::make('sessions.login');
 	}
 
     /**
