@@ -16,3 +16,4 @@ composer.lock
 .directory
 Thumbs.db
 npm-debug.log
+.env.development.php
