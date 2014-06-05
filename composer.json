@@ -29,7 +29,7 @@
 			"php artisan optimize"
 		],
 		"post-create-project-cmd": [
-			"php artisan key:generate"
+			"php artisan key:pgenerate"
 		]
 	},
 	"config": {
@@ -37,6 +37,7 @@
 	},
 	"minimum-stability": "stable",
 	"require-dev": {
-		"way/generators": "2.*"
+		"way/generators": "2.*",
+        "fzaninotto/faker": "1.5.*@dev"
 	}
 }
