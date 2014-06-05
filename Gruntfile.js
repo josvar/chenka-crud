@@ -22,7 +22,7 @@ module.exports = function (grunt) {
         config: {
             // Configurable paths
             app: 'app_design',
-            dist: 'dist'
+            dist: 'public/statics'
         },
 
         // Watches files for changes and runs tasks based on the changed files
@@ -329,8 +329,8 @@ module.exports = function (grunt) {
             customdeps: {
                 expand: true,
                 dot: true,
-                cwd: '<%= yeoman.app %>/bower_components',
-                dest: '<%= yeoman.dist %>/bower_components',
+                cwd: '<%= config.app %>/bower_components',
+                dest: '<%= config.dist %>/bower_components',
                 src: [
                     'ckeditor/**/*.*',
                     'foundation-icon-fonts/*.{css,eot,svg,ttf,woff}'
