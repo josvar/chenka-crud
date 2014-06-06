@@ -29,7 +29,7 @@
 			"php artisan optimize"
 		],
 		"post-create-project-cmd": [
-			"php artisan key:pgenerate"
+			"php artisan key:generate"
 		]
 	},
 	"config": {
