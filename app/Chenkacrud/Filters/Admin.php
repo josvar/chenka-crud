@@ -1,11 +1,11 @@
 <?php namespace Chenkacrud\Filters;
 
-use Auth, Redirect;
+use Auth, Redirect, URL;
 
 class Admin {
 
     public function filter() {
-        if (Auth::guest()) return Redirect::guest('admin/login');
+        if (Auth::guest()) return Redirect::guest( URL::route('login') );
     }
 
 }

@@ -65,7 +65,7 @@ class SessionsController extends \BaseController {
      * @return mixed
      */
     protected function sessionCreationSucceeds() {
-        return Redirect::route('login');
+        return Redirect::intended( URL::route('login') );
     }
 
 }
