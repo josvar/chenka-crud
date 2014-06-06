@@ -6,7 +6,7 @@ use Chenkacrud\Services\SessionService;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
 
-class SessionsController extends \BaseController {
+class SessionController extends \BaseController {
 
     /**
      * @var Chenkacrud\Services\SessionService
@@ -26,7 +26,7 @@ class SessionsController extends \BaseController {
         if(Auth::check()) {
             return Redirect::route('dashboard');
         }
-        return View::make('sessions.login');
+        return View::make('admin.session.login');
 	}
 
     /**
@@ -58,14 +58,14 @@ class SessionsController extends \BaseController {
 	{
         Auth::logout();
         Session::flush();
-        return Redirect::route('login');
+        return Redirect::route('admin.login');
 	}
 
     /**
      * @return mixed
      */
     protected function sessionCreationSucceeds() {
-        return Redirect::intended( URL::route('login') );
+        return Redirect::intended( URL::route('admin.login') );
     }
 
 }
