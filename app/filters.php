@@ -44,6 +44,8 @@ Route::filter('auth.basic', function()
 	return Auth::basic();
 });
 
+Route::filter('admin', 'Chenkacrud\Filters\Admin');
+
 /*
 |--------------------------------------------------------------------------
 | Guest Filter

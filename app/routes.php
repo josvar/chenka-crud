@@ -5,28 +5,31 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
-Route::get('/gaston', function()
-{
-    return View::make('hello gaston!');
-});
-
+# Route Group with Prefix
 Route::group(['prefix' => Config::get('chenka.app.access_url')], function() {
 
-    Route::get('/', [ 'as' => 'dashboard', 'uses' => 'DashboardController@index']);
+    # Authentication by SessionsController
+    Route::get('login', [ 'as' => 'admin.login', 'uses' => 'SessionController@create']);
+    Route::post('session', [ 'as' => 'admin.session.store', 'uses' => 'SessionController@store']);
+    Route::get('logout', [ 'as' => 'admin.logout', 'uses' => 'SessionController@destroy']);
 
-    Route::get('login', [ 'as' => 'login', 'uses' => 'SessionsController@create']);
-    Route::post('login', 'SessionsController@store');
-    Route::get('logout', [ 'as' => 'logout', 'uses' => 'SessionsController@destroy']);
-    Route::resource('sessions', 'SessionsController', ['only' => ['create', 'store', 'destroy']]);
+    # Route Group with Admin Filter
+    Route::group(['before' => 'admin'], function() {
 
-    Route::resource('posts', 'Josreload\ChenkaCrud\Controllers\PostsController');
-    Route::resource('users', 'Josreload\ChenkaCrud\Controllers\UsersController');
-    Route::group(['prefix' => 'settings'], function(){
-        Route::get('', function(){
-            return Redirect::to(Config::get('chenka.app.access_url') . '/settings/profile');
-        });
-        Route::get('profile', function(){
-            return 'profile';
+        Route::get('/', [ 'as' => 'dashboard', 'uses' => 'DashboardController@index']);
+
+        Route::resource('posts', 'PostsController');
+
+        Route::group(['prefix' => 'settings'], function(){
+
+            Route::get('/', function(){
+                return Redirect::to( URL::route('docs') );
+            });
+
+            Route::get('profile',  function(){
+                return 'profile';
+            });
+
         });
     });
 });

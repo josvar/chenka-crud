@@ -6,7 +6,7 @@
 /node_modules
 /app_design/bower_components
 /test/bower_components
-/public/statics
+/public/statics/bower_components
 composer.phar
 composer.lock
 .env.*.php
@@ -16,3 +16,4 @@ composer.lock
 .directory
 Thumbs.db
 npm-debug.log
+.env.development.php

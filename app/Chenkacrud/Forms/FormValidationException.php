@@ -17,7 +17,7 @@ class FormValidationException extends \Exception {
     {
         $this->errors = $errors;
 
-        parent::__construnct($message);
+        parent::__construct($message);
     }
 
     /**
