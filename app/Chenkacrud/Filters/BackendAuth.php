@@ -2,10 +2,10 @@
 
 use Auth, Redirect, URL;
 
-class Admin {
+class BackendAuth {
 
     public function filter() {
-        if (Auth::guest()) return Redirect::guest( URL::route('admin.login') );
+        if (Auth::guest()) return Redirect::guest( URL::route('backend.login') );
     }
 
 }

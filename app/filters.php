@@ -44,7 +44,8 @@ Route::filter('auth.basic', function()
 	return Auth::basic();
 });
 
-Route::filter('admin', 'Chenkacrud\Filters\Admin');
+Route::filter('backend.auth', 'Chenkacrud\Filters\BackendAuth');
+Route::filter('backend.guest', 'Chenkacrud\Filters\BackendGuest');
 
 /*
 |--------------------------------------------------------------------------
@@ -75,7 +76,8 @@ Route::filter('guest', function()
 
 Route::filter('csrf', function()
 {
-	if (Session::token() != Input::get('_token'))
+    $token = Request::ajax() ? Request::header('X-CSRF-Token') : Input::get('_token');
+	if (Session::token() != $token)
 	{
 		throw new Illuminate\Session\TokenMismatchException;
 	}

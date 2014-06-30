@@ -1,6 +1,8 @@
-<?php
+<?php namespace Backend;
 
-class DashboardController extends \BaseController {
+use Illuminate\Support\Facades\View;
+
+class DashboardController extends BaseController {
 
 	/**
 	 * Display a listing of the resource.
@@ -9,7 +11,7 @@ class DashboardController extends \BaseController {
 	 */
 	public function index()
 	{
-        return 'Dash';
+        return View::make('backend.dashboard.dashboard');
 	}
 
 

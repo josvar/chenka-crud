@@ -1,6 +1,6 @@
-<?php
+<?php namespace Backend;
 
-class PostsController extends \BaseController {
+class PostsController extends BaseController {
 
 	/**
 	 * Display a listing of the resource.

@@ -1,4 +1,4 @@
-@extends('admin.layouts.master')
+@extends('backend.layouts.master')
 
 @section('title')
 ChenkaCrud | Login
@@ -12,8 +12,8 @@ login
 <div id="login">
     <h1><span class="">ChenkaCrud</span></h1>
 
-    {{ Form::open(['route' => 'admin.session.store', 'class' => 'form-signin', 'role' => 'form']) }}
-    @include('admin.session.partials._form-login')
+    {{ Form::open(['route' => 'backend.session.store', 'class' => 'form-signin', 'role' => 'form']) }}
+    @include('backend.session.partials._form-login')
     {{ Form::close() }}
 
     <section class="footer">

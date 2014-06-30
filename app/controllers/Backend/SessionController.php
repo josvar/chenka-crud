@@ -1,20 +1,22 @@
-<?php
+<?php namespace Backend;
 
 use Chenkacrud\Forms\FormValidationException;
 use Chenkacrud\Services\SessionCredentialsException;
 use Chenkacrud\Services\SessionService;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
+use Auth, View, URL, Session;
 
 class SessionController extends \BaseController {
 
     /**
-     * @var Chenkacrud\Services\SessionService
+     * @var \Chenkacrud\Services\SessionService
      */
     protected $session;
 
     function __construct(SessionService $session)
     {
+        $this->beforeFilter('backend.guest', array('except' => 'destroy'));
         $this->session = $session;
     }
 
@@ -23,10 +25,7 @@ class SessionController extends \BaseController {
      */
     public function create()
 	{
-        if(Auth::check()) {
-            return Redirect::route('dashboard');
-        }
-        return View::make('admin.session.login');
+        return View::make('backend.session.login');
 	}
 
     /**
@@ -58,14 +57,14 @@ class SessionController extends \BaseController {
 	{
         Auth::logout();
         Session::flush();
-        return Redirect::route('admin.login');
+        return Redirect::route('backend.login');
 	}
 
     /**
      * @return mixed
      */
     protected function sessionCreationSucceeds() {
-        return Redirect::intended( URL::route('admin.login') );
+        return Redirect::intended( URL::route('backend.dashboard') );
     }
 
 }

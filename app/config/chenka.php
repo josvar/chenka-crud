@@ -3,7 +3,7 @@
 return [
     'app' => [
         'app_name' => 'ChenkaCrud',
-        'access_url' => 'admin'
+        'access_url' => 'backend'
     ],
     'menu' => [
 
