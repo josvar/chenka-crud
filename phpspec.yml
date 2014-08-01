@@ -1,0 +1,6 @@
+suites:
+  chenkacrud_suite:
+    namespace: Chenkacrud
+    src_path: app
+    spec_path: app
+    spec_prefix: spec

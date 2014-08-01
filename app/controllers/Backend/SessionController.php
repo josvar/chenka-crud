@@ -55,6 +55,7 @@ class SessionController extends \BaseController {
      */
     public function destroy()
 	{
+        //tododev: deberia ir en SessionService
         Auth::logout();
         Session::flush();
         return Redirect::route('backend.login');

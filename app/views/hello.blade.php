@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Laravel PHP Framework</title>
+
+	@include('partials.meta_seo')
+
 	<style>
 		@import url(//fonts.googleapis.com/css?family=Lato:700);
 
