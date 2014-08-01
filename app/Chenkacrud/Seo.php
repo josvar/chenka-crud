@@ -6,7 +6,7 @@ class Seo extends Eloquent{
 
     protected $table = 'seo';
 
-    public function seoable(){
-        return $this->morphTo();
+    public function node(){
+        return $this->belongsTo('Chenkacrud\Node', 'node_id');
     }
 } 
