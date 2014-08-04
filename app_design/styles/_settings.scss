@@ -79,7 +79,8 @@ $primary-color: #008CBA;
 // $shiny-edge-color: rgba(#fff, .5);
 // $shiny-edge-active-color: rgba(#000, .2);
 
-$column-gutter: rem-calc(30);
+//$column-gutter: rem-calc(30);
+$column-gutter: rem-calc(16);
 
 // Media Query Ranges
 // $small-range: (0em, 40em);
@@ -551,8 +552,10 @@ $button-margin-bottom: rem-calc(0);
 // $form-label-pointer: pointer;
 // $form-label-font-size: rem-calc(14);
 // $form-label-font-weight: $font-weight-normal;
+$form-label-font-weight: 600;
 // $form-label-line-height: 1.5;
 // $form-label-font-color: scale-color(#000, $lightness: 30%);
+$form-label-font-color: scale-color(#000, $lightness: 25%);
 // $form-label-small-transform: capitalize;
 // $form-label-bottom-margin: 0;
 // $input-font-family: inherit;

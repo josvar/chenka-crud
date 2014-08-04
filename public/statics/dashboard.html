@@ -69,15 +69,17 @@
 <script src="scripts/vendor.js"></script>
 
 <script src="bower_components/ckeditor/ckeditor.js"></script>
+
+<script src="scripts/main.js"></script>
+
 <script>
     $(document).foundation();
-    CKEDITOR.replace('editor1', {
+    CKEDITOR.replace('editor1', {});
+    CKEDITOR.replace('editor2', {
         extraPlugins: 'image2',
         filebrowserBrowseUrl: '/browser/browse.php',
         filebrowserUploadUrl: '/uploader/upload.php'
     });
 </script>
-
-<script src="scripts/main.js"></script>
 </body>
 </html>

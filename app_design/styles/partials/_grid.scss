@@ -14,88 +14,48 @@ body.dashboard {
     margin-top: 32px;
   }
 
-  .ch-wrap{
+  .title-section-row {
+    @include grid-row();
+    margin-bottom: 20px;
+    .title-section-column {
+      @include grid-column(12);
+    }
+  }
+
+  .ch-wrap {
     height: auto;
     min-height: 100%;
     width: 100%;
     position: relative;
 
-
-    .ch-content{
+    .ch-content {
       @media #{$medium-up} {
         margin-left: 180px;
+        margin-right: 20px;
         margin-top: 0;
         padding-left: 0;
       }
       margin-left: 0;
       padding-left: 10px;
+      padding-right: 10px;
       height: 100%;
 
-
-      .ch-body{
+      .ch-body {
         position: relative;
-
+        margin: 10px 12px 0 0;
         padding-top: 46px;
         @media #{$medium-up} {
           padding-top: 0;
         }
 
-        .ch-body-content{
-          padding-bottom: 65px;
+        padding-bottom: 65px;
+        float: left;
+        width: 100%;
+        overflow: visible !important;
+
+        .form-wrap {
           float: left;
           width: 100%;
-          overflow: visible!important;
-
-          .wrap{
-            margin-right: 12px;
-            margin-left: 0;
-            @media #{$medium-up} {
-              margin: 10px 20px 0 2px;
-            }
-
-            .one-column {
-              margin: 0;
-              @media #{$medium-up} {
-              }
-            }
-
-            .form-wrap {
-              padding-top: 10px;
-              min-width: 0;
-              @media #{$medium-up} {
-                min-width: 763px;
-              }
-
-              .two-columns{
-                margin: 0;
-                @media #{$medium-up} {
-                  margin-right: 300px;
-                }
-              }
-
-              .container-1{
-                margin-right: 0;
-                width: 100%;
-                float: right;
-                @media #{$medium-up} {
-                  width: 280px;
-                  margin-right: -300px;
-                }
-              }
-
-              .body-container, .container-2{
-                height: auto;
-                min-height: 100%;
-                width: 100%;
-                position: static;
-                float: left;
-                min-width: 0;
-                @media #{$medium-up} {
-                  min-width: 463px;
-                }
-              }
-            }
-          }
         }
       }
     }
@@ -107,7 +67,7 @@ body.dashboard {
 | Sidebar Menu
 |---------------------------------------------------------------------
 */
-#admin-menu-background{
+#admin-menu-background {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -118,7 +78,7 @@ body.dashboard {
   }
 }
 
-#admin-menu-wrap{
+#admin-menu-wrap {
   z-index: 99;
   position: fixed;
   @media #{$small-only} {

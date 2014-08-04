@@ -1,0 +1,2 @@
+if (!!!templates) var templates = {};
+templates["form-title-box"] = new Hogan.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div class=\"title-section-row\">");t.b("\n" + i);t.b("    <div class=\"title-section-column\">");t.b("\n" + i);t.b("        <h2>Edit Post</h2>");t.b("\n" + i);t.b("    </div>");t.b("\n" + i);t.b("</div>");return t.fl(); },partials: {}, subs: {  }});
