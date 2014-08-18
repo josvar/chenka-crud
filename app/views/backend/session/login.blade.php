@@ -1,11 +1,7 @@
-@extends('backend.layouts.master')
+@extends('backend.layouts.master_login')
 
 @section('title')
 ChenkaCrud | Login
-@stop
-
-@section('body_class')
-login
 @stop
 
 @section('body')

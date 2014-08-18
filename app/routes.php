@@ -18,6 +18,12 @@ Route::group(['prefix' => $access_url, 'namespace' => 'Backend'], function ()
     # Backend Routes
     Route::get('/', ['as' => 'backend.dashboard', 'uses' => 'DashboardController@index']);
 
+    Route::get('node/{type}','NodeController@index');
+    Route::get('node/create/{type}', 'NodeController@create');
+    Route::post('node/{type}', 'NodeController@store');
+    Route::resource('node', 'PostsController', ['only' => ['edit', 'update', 'destroy'] ]);
+
+    Route::post('posts/{type}','PostsController@store');
     Route::resource('posts', 'PostsController');
 
     Route::group(['prefix' => 'settings'], function ()

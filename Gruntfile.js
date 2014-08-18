@@ -22,7 +22,7 @@ module.exports = function (grunt) {
         config: {
             // Configurable paths
             app: 'app_design',
-            dist: 'public/statics'
+            dist: 'app_dist'
         },
 
         // Watches files for changes and runs tasks based on the changed files

@@ -1,55 +1,67 @@
-<?php namespace Backend;
+<?php
 
 use Chenkacrud\Nodes\MapperCommandTrait;
-use View, Input, Response;
 use Laracasts\Commander\CommanderTrait;
 
-class PostsController extends BaseController {
+class NodeController extends \BaseController {
 
     use CommanderTrait;
     use MapperCommandTrait;
 
     /**
      * Display a listing of the resource.
+     * GET /node
      *
      * @return Response
      */
-    public function index()
+    public function index($type)
     {
-        return 'posts';
+        //
     }
-
 
     /**
      * Show the form for creating a new resource.
+     * GET /node/create
      *
      * @return Response
      */
-    public function create()
+    public function create($type)
     {
-        return View::make('backend.posts.create');
+        //
     }
-
 
     /**
      * Store a newly created resource in storage.
+     * POST /node
      *
      * @return Response
      */
     public function store($type)
     {
-        $this->execute($this->getCommandClassName($type, 'Chenkacrud', 'Publish'));
-
         try
         {
+            $this->execute($this->getCommandClassName($type));
         } catch (\Exception $e)
         {
         }
-    }
+//        $fullClassName = getCommandClassName($type, 'Chenkacrud');
+//
+//        $this->execute($fullClassName);
+//        validateSeo(Input::get('seo_tags'));
+//        validateDataMain(Input::get('posts'));
+//        validateBlockDisqus(Input::get('modules.block_disqus'));
+//        validateBlockTwoColumns(Input::get('modules.block_two_columns'));
+//        validateBlockVideoAndColumn(Input::get('modules.block_video_and_column'));
+//
+//        $node = new Node();
+//        $node->title = 'my  type';
+//        $data = Input::all();
 
+    }
 
     /**
      * Display the specified resource.
+     * GET /node/{id}
      *
      * @param  int $id
      * @return Response
@@ -59,9 +71,9 @@ class PostsController extends BaseController {
         //
     }
 
-
     /**
      * Show the form for editing the specified resource.
+     * GET /node/{id}/edit
      *
      * @param  int $id
      * @return Response
@@ -71,9 +83,9 @@ class PostsController extends BaseController {
         //
     }
 
-
     /**
      * Update the specified resource in storage.
+     * PUT /node/{id}
      *
      * @param  int $id
      * @return Response
@@ -83,9 +95,9 @@ class PostsController extends BaseController {
         //
     }
 
-
     /**
      * Remove the specified resource from storage.
+     * DELETE /node/{id}
      *
      * @param  int $id
      * @return Response
@@ -94,4 +106,5 @@ class PostsController extends BaseController {
     {
         //
     }
+
 }

@@ -576,6 +576,13 @@ $form-label-font-color: scale-color(#000, $lightness: 25%);
 // $fieldset-border-style: solid;
 // $fieldset-border-width: 1px;
 // $fieldset-border-color: #ddd;
+$fieldset-border-color: #ccc;
+fieldset {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
+  legend {
+    color: #222222;
+  }
+}
 // $fieldset-padding: rem-calc(20);
 // $fieldset-margin: rem-calc(18 0);
 

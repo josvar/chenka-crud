@@ -22,34 +22,9 @@
     @show
 
 </head>
-<body class="backend">
+<body class="login">
 
-<div class="ch-wrap">
-    <div id="admin-menu-background"></div>
-    <div id="require-sidebar"></div>
-    <div class="ch-content">
-        @include('backend.partials._topbar')
-        <div class="ch-body">
-            <div class="title-section-row">
-
-                {{-- Aca van columnas --}}
-                @yield('title-box')
-
-            </div>
-            <div class="ch-box-row">
-
-                {{-- Aca van columnas o filas y columnas --}}
-                @yield('body-box', 'Content Body')
-
-            </div>
-        </div>
-        <div class="clear-both"></div>
-    </div>
-    <div class="clear-both"></div>
-    <!-- end ch-content -->
-</div>
-<!-- end ch-wrap-->
-
+@yield('body', '')
 
 @section('scripts')
 <script src="{{ asset('statics/scripts/vendor.js') }}"></script>
@@ -72,11 +47,7 @@
     ga('send', 'pageview');
 </script>
 
-<script src="{{ asset('statics/scripts/main.js') }}"></script>
-
-<script>
-    $(document).foundation();
-</script>
 @show
 </body>
 </html>
+ 
