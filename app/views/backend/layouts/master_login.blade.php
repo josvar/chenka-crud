@@ -17,7 +17,7 @@
     @section('styles')
     <link rel="stylesheet" href="{{ asset('statics/bower_components/foundation-icon-fonts/foundation-icons.css') }}">
     <link rel="stylesheet" href="{{ asset('statics/styles/vendor.css') }}"/>
-    <link rel="stylesheet" href="{{ asset('statics/styles/main.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('assets/styles/main.css') }}"/>
     <script src="{{ asset('statics/scripts/vendor/modernizr.js') }}"></script>
     @show
 
@@ -27,7 +27,7 @@
 @yield('body', '')
 
 @section('scripts')
-<script src="{{ asset('statics/scripts/vendor.js') }}"></script>
+<script src="{{ asset('assets/scripts/vendor.js') }}"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
@@ -50,4 +50,3 @@
 @show
 </body>
 </html>
- 
