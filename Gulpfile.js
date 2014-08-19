@@ -76,7 +76,7 @@ gulp.task('clean', function () {
 });
 
 
-gulp.task('watch', ['clean', 'scripts-build-vendor', 'styles'],function () {
+gulp.task('watch', ['clean', 'scripts-build-vendor', 'styles', 'scripts'],function () {
     // watch for changes
     gulp.watch([
         'public/assets/styles/**/*.css',
