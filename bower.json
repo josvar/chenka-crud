@@ -1,7 +1,6 @@
 {
     "name": "chenka-crud-dev",
     "version": "0.0.0",
-    "appPath": "app_design",
     "dependencies": {
         "modernizr": "~2.8.*",
         "jquery": "~2.1.0",
@@ -13,4 +12,3 @@
     },
     "devDependencies": {}
 }
-
