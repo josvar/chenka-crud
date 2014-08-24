@@ -6,6 +6,7 @@
 /node_modules
 /app/assets/bower_components
 /test/bower_components
+/public/assets
 composer.phar
 composer.lock
 .env.*.php

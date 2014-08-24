@@ -5,6 +5,7 @@ var gulp = require('gulp');
 
 // load plugins
 var $ = require('gulp-load-plugins')();
+var del = require('del');
 
 var bowerDir = 'app/assets/bower_components/';
 var scriptsPaths = { vendor: [ bowerDir + 'jquery/dist/jquery.min.js',
@@ -38,14 +39,14 @@ gulp.task('scripts', function () {
 });
 
 gulp.task('scripts-build-vendor', function () {
-  gulp.src(scriptsPaths.vendor)
+  return gulp.src(scriptsPaths.vendor)
     .pipe($.uglify())
     .pipe($.concat('vendor.js'))
     .pipe(gulp.dest('public/assets/scripts'));
 });
 
 gulp.task('scripts-build', ['scripts-build-vendor'], function () {
-  gulp.src(scriptsPaths.user)
+  return gulp.src(scriptsPaths.user)
     .pipe($.uglify())
     .pipe($.concat('main.js'))
     .pipe(gulp.dest('public/assets/scripts'));
@@ -69,14 +70,21 @@ gulp.task('fonts', function () {
     .pipe($.flatten())
     .pipe(gulp.dest('public/assets/styles/fonts'))
     .pipe($.size());
-})
-
-gulp.task('clean', function () {
-    return gulp.src(['public/assets'], { read: false }).pipe($.clean());
 });
 
+gulp.task('ckeditor', function () {
+  return gulp.src('app/assets/bower_components/ckeditor/**/*')
+    .pipe(gulp.dest('public/assets/ckeditor'));
+});
 
-gulp.task('watch', ['clean', 'scripts-build-vendor', 'styles', 'scripts', 'images', 'fonts'],function () {
+gulp.task('clean', function () {
+  return gulp.src(['public/assets'], { read: false }).pipe($.clean());
+});
+
+gulp.task('watch', ['clean'], function () {
+  gulp.start('watch-process');
+});
+gulp.task('watch-process', [ 'scripts-build-vendor', 'styles', 'scripts', 'images', 'fonts', 'ckeditor' ],function () {
     // watch for changes
     gulp.watch([
         'public/assets/styles/**/*.css',
@@ -92,11 +100,15 @@ gulp.task('watch', ['clean', 'scripts-build-vendor', 'styles', 'scripts', 'image
 
 });
 
-gulp.task('build', ['clean', 'styles', 'scripts-build', 'images', 'fonts' ], function () {
-  gulp.src('public/assets/styles/main.css')
+
+gulp.task('build-process', ['scripts-build', 'styles', 'images', 'fonts', 'ckeditor'], function () {
+  return gulp.src('public/assets/styles/main.css')
     .pipe($.csso())
-    .pipe(gulp.dest('public/assets/styles/main.css'));
-})
+    .pipe(gulp.dest('public/assets/styles'));
+});
+gulp.task('build', [ 'clean' ], function () {
+  gulp.start('build-process');
+});
 
 gulp.task('default', function () {
   gulp.start('build');
